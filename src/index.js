@@ -6,6 +6,7 @@ const { PrismaClient } = require('@prisma/client');
 
 const Link = require('./resolvers/Link');
 const User = require('./resolvers/User');
+const Vote = require('./resolvers/Vote');
 const Query = require('./resolvers/Query');
 const Mutation = require('./resolvers/Mutation');
 const Subscription = require('./resolvers/Subscription');
@@ -18,6 +19,7 @@ const prisma = new PrismaClient();
 const resolvers = {
   Link,
   User,
+  Vote,
   Query,
   Mutation,
   Subscription
