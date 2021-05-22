@@ -11,9 +11,6 @@ const resolvers = {
     feed: (parent, args, context) => {
       return context.prisma.link.findMany();
     }
-    // link: (parent, args, context) => {
-    //   return links.find(item => item.id === args.id);
-    // }
   },
   Mutation: {
     post: (parent, args, context, info) => {
@@ -25,25 +22,6 @@ const resolvers = {
       });
       return newLink;
     }
-    // updateLink: (parent, args) => {
-    //   const index = links.findIndex(item => item.id === args.id);
-
-    //   if (index !== -1) {
-    //     links[index].url = args.url;
-    //     links[index].description = args.description;
-
-    //     return links[index];
-    //   }
-    // },
-    // deleteLink: (parent, args) => {
-    //   const index = links.findIndex(item => item.id === args.id);
-
-    //   if (index !== -1) {
-    //     const link = links[index];
-    //     links.splice(index, 1);
-    //     return link;
-    //   }
-    // }
   }
 };
 
